@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
-    android:background="#D9E7E5"
+    android:background="@drawable/background"
     >
 
     <ImageView
         android:id="@+id/splash_logo"
-        android:layout_width="322dp"
-        android:layout_height="322dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/ic_owl" />
+        android:src="@drawable/splash_logo" />
 
 </RelativeLayout>

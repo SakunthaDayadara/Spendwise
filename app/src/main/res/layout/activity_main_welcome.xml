@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity_Welcome"
-    android:background="#D9E7E5">
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/textView"
@@ -13,40 +13,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="256dp"
         android:text="Welcome!"
-        android:textColor="#528265"
+        android:textColor="#37474F"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/welcome_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="200dp"
-        android:backgroundTint="#37474F"
-        android:text="Log In"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.338" />
 
-    <Button
-        android:id="@+id/welcome_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="200dp"
-        android:backgroundTint="#37474F"
-        android:text="Register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.72" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView6"
@@ -62,9 +36,81 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.546"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/new_logo" />
 
+    <RelativeLayout
+        android:id="@+id/welcome_login"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="526dp"
+        android:layout_centerInParent = "true"
+        android:background="@drawable/login_btn"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.338">
 
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:src="@drawable/login_btn"
+            app:tint = "#30000000"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/login_btn"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Log In"
+            android:textAllCaps="true"
+            android:textColor="#D9E7E5"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/welcome_register"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="626dp"
+        android:layout_centerInParent = "true"
+        android:background="@drawable/register"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.72">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:src="@drawable/register"
+            app:tint = "#30000000"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/register"></RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Register"
+            android:textAllCaps="true"
+            android:textColor="#37474F"
+            android:textSize="20dp"/>
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout >
