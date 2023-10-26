@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.546"
-        app:srcCompat="@drawable/new_logo" />
+        app:srcCompat="@drawable/welcome_logo" />
 
     <RelativeLayout
         android:id="@+id/welcome_login"
@@ -102,14 +102,15 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="7dp"
             android:background="@drawable/register"></RelativeLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Register"
             android:textAllCaps="true"
-            android:textColor="#37474F"
-            android:textSize="20dp"/>
+            android:textColor="#D9E7E5"
+            android:textSize="20dp" />
     </RelativeLayout>
 
 

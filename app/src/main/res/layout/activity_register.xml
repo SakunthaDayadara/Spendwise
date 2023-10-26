@@ -98,7 +98,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:text="REGISTER"
-        android:textColor="#ffffff"
+        android:textColor="#37474F"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -195,7 +195,7 @@
             android:gravity="center"
             android:text="Register"
             android:textAllCaps="true"
-            android:textColor="#37474F"
+            android:textColor="#D9E7E5"
             android:textSize="18dp" />
     </RelativeLayout>
 
@@ -207,7 +207,7 @@
         android:layout_marginBottom="44dp"
         android:text="Already have an Account?"
         android:textSize="17dp"
-        android:textColor="#ffffff"
+        android:textColor="#37474F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.336"
@@ -219,7 +219,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:text="LogIn"
-        android:textColor="#ffffff"
+        android:textColor="#37474F"
         android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
