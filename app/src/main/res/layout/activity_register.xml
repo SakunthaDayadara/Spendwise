@@ -8,7 +8,7 @@
     tools:context=".Register">
 
     <EditText
-        android:id="@+id/editTextUsername4"
+        android:id="@+id/register_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.461" />
 
     <EditText
-        android:id="@+id/editTextUsername2"
+        android:id="@+id/register_fname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.234" />
 
     <EditText
-        android:id="@+id/editTextUsername3"
+        android:id="@+id/register_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -111,7 +111,7 @@
         app:layout_constraintVertical_bias="0.119" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/register_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -138,7 +138,7 @@
         app:layout_constraintVertical_bias="0.556" />
 
     <EditText
-        android:id="@+id/editTextConfirmPassword2"
+        android:id="@+id/register_cpassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -163,7 +163,7 @@
         app:layout_constraintVertical_bias="0.663" />
 
     <RelativeLayout
-        android:id="@+id/welcome_register"
+        android:id="@+id/register_register"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_centerInParent="true"
