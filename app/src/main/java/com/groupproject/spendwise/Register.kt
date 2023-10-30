@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.groupproject.spendwise.databinding.ActivityRegisterBinding
 import kotlinx.android.synthetic.main.activity_register.*
 
@@ -14,11 +16,13 @@ class Register : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_register)
 
+        dbRef = FirebaseDatabase.getInstance().getReference("Users")
 
 
         binding = ActivityRegisterBinding.inflate(layoutInflater)
@@ -38,6 +42,7 @@ class Register : AppCompatActivity() {
                 if (password == cpassword){
                     firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                         if (it.isSuccessful){
+                            saveUserdata()
                             val intent = Intent(this, Login::class.java)
                             startActivity(intent)
                         }else{
@@ -58,6 +63,23 @@ class Register : AppCompatActivity() {
             startActivity(loginintent)
         }
 
+
+    }
+
+    private fun saveUserdata() {
+
+        val userId =  dbRef.push().key!!
+        val fname = binding.registerFname.text.toString()
+        val uname = binding.registerUsername.text.toString()
+        val email = binding.registerEmail.text.toString()
+
+        val User = UserModel(userId, email, fname, uname)
+
+        dbRef.child(userId).setValue(User).addOnCompleteListener {
+            Toast.makeText(this, "User Created Successful", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener { err ->
+            Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
+        }
 
     }
 }
