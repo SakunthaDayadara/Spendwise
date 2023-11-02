@@ -6,21 +6,26 @@
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/drawable/baseline_arrow_back_24.xml" value="0.1" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/drawable/baseline_beenhere_24.xml" value="0.1" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/drawable/input_bg.xml" value="0.1" />
+        <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/drawable/item_selector.xml" value="0.184" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/drawable/login_btn.xml" value="0.184" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/drawable/register.xml" value="0.184" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/actionbar.xml" value="0.1" />
+        <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_expenses.xml" value="0.17552083333333332" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_home.xml" value="0.16145833333333334" />
+        <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_income.xml" value="0.17552083333333332" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_main.xml" value="0.12" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_main_welcome.xml" value="0.1" />
+        <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_profile.xml" value="0.17552083333333332" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_splash_screen.xml" value="0.16666666666666666" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/home_page_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/menu/bottom_menu.xml" value="0.17552083333333332" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.184" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
