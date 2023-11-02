@@ -34,7 +34,7 @@
         android:layout_width="66dp"
         android:layout_height="65dp"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/SpendWise"
+        android:src="@drawable/spendwise"
         android:layout_centerVertical="true"/>
 
 
