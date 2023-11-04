@@ -75,7 +75,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.521"
             app:srcCompat="@drawable/home_deco" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

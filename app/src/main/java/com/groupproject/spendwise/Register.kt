@@ -81,5 +81,8 @@ class Register : AppCompatActivity() {
             Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
         }
 
+
+
+
     }
 }

@@ -1,13 +1,14 @@
 package com.groupproject.spendwise
 
 import android.content.Intent
-import android.os.Binder
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.groupproject.spendwise.databinding.ActivityLoginBinding
 
+@Suppress("DEPRECATION")
 class Login : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
@@ -30,6 +31,7 @@ class Login : AppCompatActivity() {
                     if (it.isSuccessful){
                         val intent = Intent(this, Home::class.java)
                         startActivity(intent)
+                        this.finish()
                     }else{
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
@@ -38,6 +40,9 @@ class Login : AppCompatActivity() {
                 Toast.makeText(this, "Fields cannot be empty", Toast.LENGTH_SHORT).show()
             }
         }
+
+
+
 
 
     }
