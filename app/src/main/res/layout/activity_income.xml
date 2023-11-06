@@ -7,8 +7,7 @@
     tools:context=".Income"
     android:background="@drawable/background">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         android:background="@color/DarkerBlue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,11 +38,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dashboard"
-            android:textSize="25dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textColor="@color/DarkGreen"/>
+            android:layout_centerInParent="true"
+            android:text="Income"
+            android:textColor="@color/DarkGreen"
+            android:textSize="25dp" />
 
         <ImageView
             android:layout_width="66dp"
