@@ -10,11 +10,13 @@
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/drawable/login_btn.xml" value="0.184" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/drawable/register.xml" value="0.184" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/actionbar.xml" value="0.1" />
+        <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/actionbar_income.xml" value="0.1" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_expenses.xml" value="0.17552083333333332" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_forgot_email_sent.xml" value="0.16847826086956522" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_forgot_password.xml" value="0.1" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_home.xml" value="0.3333333333333333" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_income.xml" value="0.17552083333333332" />
+        <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_income_page.xml" value="0.22" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_main.xml" value="0.12" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_main_welcome.xml" value="0.1" />
@@ -22,6 +24,8 @@
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/activity_splash_screen.xml" value="0.16666666666666666" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/home_page_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/income_page_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/layout/income_recycleview_row.xml" value="0.16847826086956522" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/menu/bottom_menu.xml" value="0.17552083333333332" />
         <entry key="..\:/MOBILE APP/Spendwise/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.184" />
       </map>

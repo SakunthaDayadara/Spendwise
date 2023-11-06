@@ -57,6 +57,8 @@
 
 
 
+    <include layout="@layout/income_page_layout" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
