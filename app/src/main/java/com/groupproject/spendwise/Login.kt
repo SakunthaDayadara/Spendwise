@@ -42,8 +42,12 @@ class Login : AppCompatActivity() {
         }
 
 
+    }
 
 
-
+    override fun onBackPressed(){
+        startActivity(Intent(this, MainActivity_Welcome::class.java))
+        this.finish()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 }

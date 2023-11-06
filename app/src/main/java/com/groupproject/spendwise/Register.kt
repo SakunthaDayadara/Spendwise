@@ -45,6 +45,7 @@ class Register : AppCompatActivity() {
                             saveUserdata()
                             val intent = Intent(this, Login::class.java)
                             startActivity(intent)
+                            this.finish()
                         }else{
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                         }
@@ -84,5 +85,11 @@ class Register : AppCompatActivity() {
 
 
 
+    }
+
+    override fun onBackPressed(){
+        startActivity(Intent(this, MainActivity_Welcome::class.java))
+        this.finish()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 }
