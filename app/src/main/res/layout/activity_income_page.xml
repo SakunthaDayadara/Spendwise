@@ -10,7 +10,7 @@
 
     <include layout="@layout/actionbar_income"/>
 
-    <include layout="@layout/income_page_layout"/>
+    <include layout="@layout/income_page_layout" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
