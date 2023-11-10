@@ -179,6 +179,8 @@
 
 
 
+
+
             <AutoCompleteTextView
                 android:id="@+id/drop_items"
                 android:layout_width="match_parent"
@@ -191,7 +193,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/income_add_description"
+
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -211,6 +213,8 @@
             app:layout_editor_absoluteY="50dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/income_add_description"
+
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:inputType="text" />

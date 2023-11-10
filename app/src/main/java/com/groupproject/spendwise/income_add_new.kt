@@ -5,11 +5,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.core.view.isNotEmpty
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.groupproject.spendwise.databinding.ActivityIncomeAddNewBinding
 import kotlinx.android.synthetic.main.activity_income_add_new.*
 import java.util.*
+
+var incometype:String = ""
+var icon:Int = 0
+
 
 class income_add_new : AppCompatActivity() {
 
@@ -30,7 +35,7 @@ class income_add_new : AppCompatActivity() {
         val incometypes = listOf("Salary", "Rental", "Investments", "Other")
         val autocomplete : AutoCompleteTextView = findViewById(R.id.drop_items)
 
-        FirebaseDatabase.getInstance().getReference(username + "income")
+        dbRef = FirebaseDatabase.getInstance().getReference(username + "income")
 
         val cal = Calendar.getInstance()
         val year = cal.get(Calendar.YEAR)
@@ -50,7 +55,19 @@ class income_add_new : AppCompatActivity() {
         autocomplete.onItemClickListener = AdapterView.OnItemClickListener {
                 adapterView, view, i, l ->
             val itemselected = adapterView.getItemAtPosition(i)
+            incometype = itemselected.toString()
+            if (incometype=="Salary"){
+                icon = R.drawable.salary
+            }else if (incometype=="Rental"){
+                icon = R.drawable.rental
+            }else if (incometype=="Investments"){
+                icon = R.drawable.investments
+            }else if (incometype=="Other"){
+                icon = R.drawable.other_income
+            }
         }
+
+
 
 
 
@@ -64,13 +81,21 @@ class income_add_new : AppCompatActivity() {
         binding.incomeSave.setOnClickListener {
             val amount = binding.incomeAmount.text.toString()
             val date = binding.incomeDate.text.toString()
-            val incometype = binding.incomeType.toString()
-            val incomedes = binding.incomeAddDescription.toString()
-            if (amount.isNotEmpty() && date.isNotEmpty() && incometype.isNotEmpty()){
-
-                val incomevalue = IncomeModel( amount, date, incometype, incomedes)
+            val intype = binding.incomeType.toString()
 
 
+             if (amount.isNotEmpty() && date.isNotEmpty() && intype.isNotEmpty()){
+
+                val incomevalue = IncomeModel( amount, date, incometype, icon)
+
+                dbRef.child(amount).setValue(incomevalue).addOnCompleteListener {
+                    Toast.makeText(this, "Income Added Successful", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener { err ->
+                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
+                }
+                startActivity(Intent(this, Income::class.java))
+                intent.putExtra("username", username)
+                this.finish()
 
             }else{
                 Toast.makeText(this, "Fields cannot be empty", Toast.LENGTH_SHORT).show()

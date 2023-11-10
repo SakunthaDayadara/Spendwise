@@ -4,8 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.*
 import com.groupproject.spendwise.databinding.ActivityExpensesBinding
 import com.groupproject.spendwise.databinding.ActivityIncomeAddNewBinding
 import com.groupproject.spendwise.databinding.ActivityIncomeBinding
@@ -17,6 +18,8 @@ class Income : AppCompatActivity() {
 
     private lateinit var binding: ActivityIncomeBinding
     private lateinit var dbRef: DatabaseReference
+    private lateinit var incomeRecyclerView: RecyclerView
+    private lateinit var incomeArrayList : ArrayList<IncomeModel>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +30,43 @@ class Income : AppCompatActivity() {
 
         val username = intent.getStringExtra("username")
         dbRef = FirebaseDatabase.getInstance().getReference(username + "income")
+
+
+
+
+        incomeRecyclerView = findViewById(R.id.income_recyclerview)
+        incomeRecyclerView.layoutManager = LinearLayoutManager(this)
+        incomeRecyclerView.setHasFixedSize(true)
+
+        incomeArrayList = arrayListOf<IncomeModel>()
+
+        dbRef.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                if (snapshot.exists()){
+
+                    for (incomeSnapshot in snapshot.children){
+
+                        val income = incomeSnapshot.getValue(IncomeModel::class.java)
+                        incomeArrayList.add(income!!)
+
+                    }
+
+                    incomeRecyclerView.adapter = IncomeAdapter(incomeArrayList)
+
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
+
+
+
+
 
 
 
@@ -78,6 +118,8 @@ class Income : AppCompatActivity() {
         })
 
     }
+
+
 
     override fun onBackPressed(){
         startActivity(Intent(this, Home::class.java))
