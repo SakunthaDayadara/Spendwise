@@ -158,7 +158,7 @@
                 app:tint="#30000000" />
 
             <RelativeLayout
-
+                android:id="@+id/add_expenses_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="7dp"

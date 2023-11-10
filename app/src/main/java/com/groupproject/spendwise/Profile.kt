@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.groupproject.spendwise.databinding.ActivityProfileBinding
-import kotlinx.android.synthetic.main.activity_income.view.*
 import kotlinx.android.synthetic.main.activity_profile.*
 
 

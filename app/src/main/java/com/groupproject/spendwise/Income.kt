@@ -7,6 +7,7 @@ import android.view.View
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.groupproject.spendwise.databinding.ActivityExpensesBinding
+import com.groupproject.spendwise.databinding.ActivityIncomeAddNewBinding
 import com.groupproject.spendwise.databinding.ActivityIncomeBinding
 import com.groupproject.spendwise.databinding.ActivityMainWelcomeBinding
 import kotlinx.android.synthetic.main.activity_income.*
@@ -26,6 +27,7 @@ class Income : AppCompatActivity() {
 
         val username = intent.getStringExtra("username")
         dbRef = FirebaseDatabase.getInstance().getReference(username + "income")
+
 
 
 

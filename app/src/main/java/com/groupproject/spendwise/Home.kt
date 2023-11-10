@@ -1,21 +1,11 @@
 package com.groupproject.spendwise
 
 import android.content.Intent
-import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationItemView
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.auth.FirebaseAuth
 import com.groupproject.spendwise.databinding.ActivityHomeBinding
-import com.groupproject.spendwise.databinding.ActivityLoginBinding
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_income.view.*
-import kotlinx.android.synthetic.main.activity_main_welcome.*
 
 class Home : AppCompatActivity() {
 

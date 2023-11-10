@@ -8,8 +8,6 @@ import android.view.View
 
 import com.groupproject.spendwise.databinding.ActivityExpensesBinding
 import kotlinx.android.synthetic.main.activity_expenses.*
-import kotlinx.android.synthetic.main.activity_income.*
-import kotlinx.android.synthetic.main.activity_income.view.*
 
 
 class Expenses : AppCompatActivity() {
@@ -25,7 +23,7 @@ class Expenses : AppCompatActivity() {
         val username = intent.getStringExtra("username")
 
 
-        add_income_btn.setOnClickListener {
+        add_expenses_btn.setOnClickListener {
             startActivity(Intent(this, expense_add_new::class.java))
             intent.putExtra("username", username)
             this.finish()
