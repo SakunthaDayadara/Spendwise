@@ -22,10 +22,14 @@ class Home : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val username = intent.getStringExtra("username")
+
 
         binding.bottomNavigationView.setSelectedItemId(R.id.bottom_home)
         binding.bottomNavigationView.setOnItemSelectedListener {
@@ -34,6 +38,7 @@ class Home : AppCompatActivity() {
             }else if (it.itemId == R.id.bottom_income){
                 true
                 val intent = Intent(this, Income::class.java)
+                intent.putExtra("username", username)
                 startActivity(intent)
                 this.finish()
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
@@ -41,6 +46,7 @@ class Home : AppCompatActivity() {
             }else if (it.itemId == R.id.bottom_expense){
                 true
                 val intent = Intent(this, Expenses::class.java)
+                intent.putExtra("username", username)
                 startActivity(intent)
                 this.finish()
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
@@ -48,6 +54,7 @@ class Home : AppCompatActivity() {
             }else if (it.itemId == R.id.bottom_profile){
                 true
                 val intent = Intent(this, Profile::class.java)
+                intent.putExtra("username", username)
                 startActivity(intent)
                 this.finish()
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)

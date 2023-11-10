@@ -8,14 +8,20 @@ import com.groupproject.spendwise.databinding.ActivityProfileBinding
 import kotlinx.android.synthetic.main.activity_income.view.*
 import kotlinx.android.synthetic.main.activity_profile.*
 
+
+
+
 class Profile : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val username = intent.getStringExtra("username")
 
 
 
@@ -23,6 +29,7 @@ class Profile : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             if (it.itemId == R.id.bottom_home){
                 val intent = Intent(this, Home::class.java)
+                intent.putExtra("username", username)
                 startActivity(intent)
                 this.finish()
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
@@ -30,12 +37,14 @@ class Profile : AppCompatActivity() {
 
             }else if (it.itemId == R.id.bottom_income){
                 val intent = Intent(this, Income::class.java)
+                intent.putExtra("username", username)
                 startActivity(intent)
                 this.finish()
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                 true
             }else if (it.itemId == R.id.bottom_expense){
                 val intent = Intent(this, Expenses::class.java)
+                intent.putExtra("username", username)
                 startActivity(intent)
                 this.finish()
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
@@ -50,6 +59,7 @@ class Profile : AppCompatActivity() {
 
         profile_logout_btn.setOnClickListener(View.OnClickListener{
             startActivity(Intent(this, Login::class.java))
+            intent.putExtra("username", username)
             this.finish()
         })
 
@@ -57,6 +67,7 @@ class Profile : AppCompatActivity() {
 
     override fun onBackPressed(){
         startActivity(Intent(this, Home::class.java))
+
         this.finish()
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
