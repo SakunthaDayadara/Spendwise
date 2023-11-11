@@ -16,6 +16,7 @@ var incometype:String = ""
 var icon:Int = 0
 
 
+
 class income_add_new : AppCompatActivity() {
 
     private lateinit var binding: ActivityIncomeAddNewBinding
@@ -31,8 +32,9 @@ class income_add_new : AppCompatActivity() {
 
 
 
-        val username = intent.getStringExtra("username")
+        val username = username
         val incometypes = listOf("Salary", "Rental", "Investments", "Other")
+
         val autocomplete : AutoCompleteTextView = findViewById(R.id.drop_items)
 
         dbRef = FirebaseDatabase.getInstance().getReference(username + "income")

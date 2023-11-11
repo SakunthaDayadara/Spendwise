@@ -18,7 +18,7 @@ class Home : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val username = intent.getStringExtra("username")
+        val username = username
 
 
         binding.bottomNavigationView.setSelectedItemId(R.id.bottom_home)

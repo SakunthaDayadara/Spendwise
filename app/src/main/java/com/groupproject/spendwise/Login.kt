@@ -10,6 +10,8 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.groupproject.spendwise.databinding.ActivityLoginBinding
 
+var username: String = ""
+
 @Suppress("DEPRECATION")
 class Login : AppCompatActivity() {
 
@@ -30,6 +32,7 @@ class Login : AppCompatActivity() {
 
             val uname = binding.loginUsername.text.toString()
             val password = binding.loginPassword.text.toString()
+            username = uname
 
 
 

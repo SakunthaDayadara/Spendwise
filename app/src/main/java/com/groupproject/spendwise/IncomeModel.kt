@@ -7,7 +7,7 @@ data class IncomeModel(
     var date: String? = null,
     var type: String? = null,
     var icon: Int? = null
-) {
+)
 
-}
+
 

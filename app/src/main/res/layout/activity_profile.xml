@@ -70,7 +70,7 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="421dp"
         android:layout_height="71dp"
-        android:background="@drawable/profile_pic"
+
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="674dp">
 

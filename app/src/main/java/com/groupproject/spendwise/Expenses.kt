@@ -5,6 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.*
 
 import com.groupproject.spendwise.databinding.ActivityExpensesBinding
 import kotlinx.android.synthetic.main.activity_expenses.*
@@ -13,6 +16,9 @@ import kotlinx.android.synthetic.main.activity_expenses.*
 class Expenses : AppCompatActivity() {
 
     private lateinit var binding: ActivityExpensesBinding
+    private lateinit var dbRef: DatabaseReference
+    private lateinit var incomeRecyclerView: RecyclerView
+    private lateinit var expenseArrayList : ArrayList<IncomeModel>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +26,44 @@ class Expenses : AppCompatActivity() {
         binding = ActivityExpensesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val username = intent.getStringExtra("username")
+        val username = username
+        dbRef = FirebaseDatabase.getInstance().getReference(username + "expense")
+
+
+        incomeRecyclerView = findViewById(R.id.expense_recyclerviwe)
+        incomeRecyclerView.layoutManager = LinearLayoutManager(this)
+        incomeRecyclerView.setHasFixedSize(true)
+
+
+        expenseArrayList = arrayListOf<IncomeModel>()
+
+        dbRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                if (snapshot.exists()){
+
+                    for (incomeSnapshot in snapshot.children){
+
+                        val expense = incomeSnapshot.getValue(IncomeModel::class.java)
+                        expenseArrayList.add(expense!!)
+
+                    }
+
+                    incomeRecyclerView.adapter = IncomeAdapter(expenseArrayList)
+
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
+
+
+
+
 
 
         add_expenses_btn.setOnClickListener {

@@ -28,7 +28,7 @@ class Income : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val username = intent.getStringExtra("username")
+        val username = username
         dbRef = FirebaseDatabase.getInstance().getReference(username + "income")
 
 
@@ -53,6 +53,10 @@ class Income : AppCompatActivity() {
                     }
 
                     incomeRecyclerView.adapter = IncomeAdapter(incomeArrayList)
+
+
+
+
 
                 }
 

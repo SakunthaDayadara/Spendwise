@@ -116,6 +116,7 @@
             app:prefixText="Rs.">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expense_amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number" />
@@ -146,13 +147,18 @@
             app:layout_editor_absoluteY="50dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expense_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
+
+
+
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/income_type"
+            android:id="@+id/expense_type"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -173,7 +179,7 @@
             app:layout_editor_absoluteY="50dp">
 
             <AutoCompleteTextView
-                android:id="@+id/drop_items"
+                android:id="@+id/expense_drop_items"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none">
@@ -183,33 +189,32 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/income_add_description"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:hint="Description"
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20dp"
             app:boxCornerRadiusTopStart="20dp"
-            app:layout_constraintBottom_toTopOf="@id/add_new_save"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/expense_save"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/income_type"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.75"
             app:layout_editor_absoluteY="50dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expense_add_description"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <RelativeLayout
-            android:id="@+id/add_new_save"
+            android:id="@+id/add_new_expense"
             android:layout_width="180dp"
             android:layout_height="40dp"
             android:layout_centerInParent="true"
