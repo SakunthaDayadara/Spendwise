@@ -29,6 +29,13 @@
             android:layout_height="wrap_content"
             android:padding="55dp" />
 
+        <ImageView
+            android:id="@+id/add_income_bacK"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,7 +52,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="590dp"
+        android:layout_height="630dp"
         android:background="@drawable/home_container_6"
         android:elevation="20dp"
         android:padding="10dp"
@@ -57,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:layout_constraintVertical_bias="0.6">
+        app:layout_constraintVertical_bias="0.5">
 
         <RelativeLayout
             android:id="@+id/income_pic"
@@ -107,6 +114,7 @@
             app:prefixText="Rs.">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/income_amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number" />
@@ -137,9 +145,14 @@
             app:layout_editor_absoluteY="50dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/income_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
+
+
+
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -163,6 +176,11 @@
             app:layout_constraintVertical_bias="0.0"
             app:layout_editor_absoluteY="50dp">
 
+
+
+
+
+
             <AutoCompleteTextView
                 android:id="@+id/drop_items"
                 android:layout_width="match_parent"
@@ -171,10 +189,11 @@
 
             </AutoCompleteTextView>
 
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/income_add_description"
+
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -194,6 +213,8 @@
             app:layout_editor_absoluteY="50dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/income_add_description"
+
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:inputType="text" />
@@ -221,6 +242,7 @@
                 app:tint="#30000000" />
 
             <RelativeLayout
+                android:id="@+id/income_save"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="7dp"

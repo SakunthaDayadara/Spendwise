@@ -11,8 +11,19 @@ class MainActivity_Welcome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_welcome)
 
-        welcome_login.setOnClickListener(View.OnClickListener{ startActivity(Intent(this, Login::class.java)) })
+        welcome_login.setOnClickListener(View.OnClickListener{
+            startActivity(Intent(this, Login::class.java))
+            this.finish()
+        })
 
-        welcome_register.setOnClickListener(View.OnClickListener{ startActivity(Intent(this, Register::class.java)) })
+        welcome_register.setOnClickListener(View.OnClickListener{
+            startActivity(Intent(this, Register::class.java))
+            this.finish()
+        })
+
+
+
+
+
     }
 }

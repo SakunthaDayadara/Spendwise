@@ -45,6 +45,7 @@ class Register : AppCompatActivity() {
                             saveUserdata()
                             val intent = Intent(this, Login::class.java)
                             startActivity(intent)
+                            this.finish()
                         }else{
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                         }
@@ -68,18 +69,27 @@ class Register : AppCompatActivity() {
 
     private fun saveUserdata() {
 
-        val userId =  dbRef.push().key!!
+        //val userId =  dbRef.push().key!!
         val fname = binding.registerFname.text.toString()
         val uname = binding.registerUsername.text.toString()
         val email = binding.registerEmail.text.toString()
 
-        val User = UserModel(userId, email, fname, uname)
+        val User = UserModel( email, fname, uname)
 
-        dbRef.child(userId).setValue(User).addOnCompleteListener {
+        dbRef.child(uname).setValue(User).addOnCompleteListener {
             Toast.makeText(this, "User Created Successful", Toast.LENGTH_SHORT).show()
         }.addOnFailureListener { err ->
             Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
         }
 
+
+
+
+    }
+
+    override fun onBackPressed(){
+        startActivity(Intent(this, MainActivity_Welcome::class.java))
+        this.finish()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 }

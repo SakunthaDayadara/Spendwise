@@ -16,6 +16,7 @@
         android:padding="55dp" />
 
     <ImageView
+
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@drawable/logout"

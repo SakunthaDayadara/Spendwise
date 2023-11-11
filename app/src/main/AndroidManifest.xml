@@ -20,7 +20,19 @@
             android:name=".expense_add_new"
             android:exported="false" />
         <activity
-            android:name=".Income_page"
+            android:name=".ForgotEmailSent"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Expenses"
+            android:exported="false" />
+        <activity
+            android:name=".Income"
             android:exported="false" />
         <activity
             android:name=".Home"
